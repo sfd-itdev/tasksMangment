@@ -1,0 +1,62 @@
+<div class="container-fluid">
+    <div class="breadcrumb">
+        <h1>تعريف الوحدات</h1>
+        <!--         <ul>-->
+        <!--             <li>الوحدات</li>-->
+        <!--         </ul>-->
+    </div>
+    <div class="separator-breadcrumb border-top"></div>
+<!--    <a [routerLink]="['./unit-add']">-->
+<!--        <button type="button" class="btn btn-primary">إضافة وحدة جديدة</button>-->
+<!--    </a><br><br>-->
+    <button class="btn btn-primary" mat-raised-button
+            (click)="openAddUnitDialog('AddUnitDialog',{})">إضافة وحدة جديدة</button>
+    <br><br>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card o-hidden">
+                <div>
+
+                    <table class="table" width="80%">
+                        <thead>
+                        <tr>
+                            <!--                             <th>م</th>-->
+                            <th>رمز الوحدة</th>
+                            <th>اسم الوحدة - عربي</th>
+                            <th>اسم الوحدة - انجليزي</th>
+                            <th>عمليات</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let item of data; let i = index;">
+                            <!--                             <td width="10">{{i+1}}</td>-->
+                            <td width="100">{{item.id}}</td>
+                            <td width="200">{{item.nameAr}}</td>
+                            <td width="200">{{item.nameEn}}</td>
+                            <td width="200">
+                                <button type="button" class="btn btn-primary" (click)="openUpdateUnitDialog('UpdateUnitDialog',item)">تعديل</button>
+                                &nbsp;&nbsp;&nbsp;
+                                <button type="button" class="btn btn-danger mr-1" (click)="deleteUnit(item.id)">حذف</button>
+
+                            </td>
+
+                            <!--                            <td width="50">-->
+                            <!--                                {{item.name.firstName+" "+item.name.secondName+" "+item.name.thirdName+" "+item.name.familyName}}-->
+                            <!--                            </td>-->
+                            <!--                            <td width="10" >-->
+
+                            <!--                                <a [routerLink]="['./edit', item.idNo.idNo]">-->
+                            <!--                                    <button type="button" class="btn btn-primary">تعديل</button>-->
+                            <!--                                </a>-->
+                            <!--                                <button type="button" class="btn btn-danger mr-1" (click)="deletePerson(item.idNo.idNo, i)">حذف</button>-->
+                            <!--                            </td>-->
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
