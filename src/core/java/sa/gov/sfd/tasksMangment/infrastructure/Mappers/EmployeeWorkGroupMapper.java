@@ -17,7 +17,7 @@ public class EmployeeWorkGroupMapper implements RowMapper<EmployeeWorkGroupEntit
     public EmployeeWorkGroupEntity mapRow(ResultSet resultSet, int i) throws SQLException {
         EmployeeWorkGroupEntity employeeWorkGroup = new EmployeeWorkGroupEntity();
 
-        employeeWorkGroup.setEmployeeWordGroupId(new EmployeeWorkGroupId(resultSet.getLong("EWG_ID")));
+        employeeWorkGroup.setEmployeeWorkGroupId(new EmployeeWorkGroupId(resultSet.getLong("EWG_ID")));
         employeeWorkGroup.setWorkGroupId(resultSet.getLong("WGP_ID"));
         employeeWorkGroup.setEmployeeId(resultSet.getLong("EMPLOYEE_ID"));
 

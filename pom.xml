@@ -10,12 +10,12 @@
 	</parent>
 
 	<groupId>sa.gov.sfd</groupId>
-	<artifactId>warehouseSys</artifactId>
+	<artifactId>tasksMangment</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>warehouseSys</name>
-	<description>warehouse system for sfd</description>
+	<name>tasksMangment</name>
+	<description>tasksMangment system for sfd</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

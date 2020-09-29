@@ -27,7 +27,7 @@ public class DepartmentConverter {
         return new DepartmentEntity(
                 new DepartmentId(departmentViewModel.getDepartmentId()),
                 departmentViewModel.getDepartmentName(),
-                departmentViewModel.getDepartmentNumber());
+                (int)departmentViewModel.getDepartmentNumber());
     }
 
     public static DepartmentId convertDepartmentId(DepartmentViewModel departmentViewModel) { return  new DepartmentId(departmentViewModel.getDepartmentId());}
